@@ -1,5 +1,7 @@
 <template>
-  <v-navigation-drawer permanent app>
+  <v-navigation-drawer v-model="drawer"
+                       temporary
+                       app>
     <v-toolbar dense flat>
       <!-- <v-avatar class="px-0 mx-0">
         <v-icon>add</v-icon>
@@ -26,10 +28,19 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import routes from '../router/routes';
 
 export default {
   computed: {
+    drawer: {
+      get() {
+        return this.$store.state.drawer;
+      },
+      set(val) {
+        this.$store.commit('setDrawer', val);
+      }
+    },
     links() {
       return Object.keys(routes)
         .filter(key => routes[key].meta.navigation != null)
