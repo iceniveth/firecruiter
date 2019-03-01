@@ -9,8 +9,13 @@ npm install -g parcel-bundler
 npm install
 ```
 
-Run the application.
+## Run Application
 
 ```bash
-parcel index.html
+npm run dev
+```
+
+## Build Application
+```bash
+npm run build
 ```
