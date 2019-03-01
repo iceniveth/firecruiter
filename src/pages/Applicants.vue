@@ -1,3 +1,5 @@
 <template>
-  <h2>Applicants</h2>
+  <div>
+    <app-navigation-bar title="Applicants"></app-navigation-bar>
+  </div>
 </template>

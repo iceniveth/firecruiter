@@ -1,3 +1,5 @@
 <template>
-  <h2>Requisitions</h2>
+  <div>
+    <app-navigation-bar title="Requisitions"></app-navigation-bar>
+  </div>
 </template>

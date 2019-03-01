@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Dashboard</h1>
+    <app-navigation-bar title="Dashboard"></app-navigation-bar>
   </div>
 </template>
 
