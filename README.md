@@ -1,6 +1,17 @@
-# Recruitment
+# Firecruiter
 
 ## Installation
+
+Create a firebase project from firebase console.
+
+Create ```.firebaserc``` file with:
+```json
+{
+  "projects": {
+    "default": "project-name"
+  }
+}
+```
 
 Install parcel bundler and dependencies.
 
