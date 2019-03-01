@@ -1,6 +1,8 @@
 <template>
   <v-app>
-    <p>App.vue</p>
+    <v-content>
+      <router-view :key="$route.fullPath" />
+    </v-content>
   </v-app>
 </template>
 
