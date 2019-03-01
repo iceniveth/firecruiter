@@ -1,7 +1,7 @@
 const dashboard = () => import('../pages/Dashboard');
 
 export default {
-  dashboad: {
+  dashboard: {
     path: '/dashboard',
     name: 'dashboard',
     component: dashboard,
