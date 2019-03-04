@@ -36,7 +36,8 @@
              color="black"
              bottom
              right
-             fixed>
+             fixed
+             @click="gotoCreateRequisition">
         <v-icon color="white">add</v-icon>
       </v-btn>
       <span>Create Requisition</span>
@@ -45,6 +46,8 @@
 </template>
 
 <script>
+import routes from '../router/routes';
+
 export default {
   data() {
     return {
@@ -66,6 +69,13 @@ export default {
           needed: 2
         }
       ]
+    }
+  },
+  methods: {
+    gotoCreateRequisition() {
+      this.$router.push({
+        name: routes.requisitionCreate.name
+      });
     }
   }
 };
