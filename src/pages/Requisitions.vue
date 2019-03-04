@@ -3,8 +3,9 @@
     <app-navigation-bar title="Requisitions"></app-navigation-bar>
     
     <v-subheader px="0" mx="0">February</v-subheader>
-    <v-divider></v-divider>
-    <v-list class="py-0 mt-1">
+    <v-list class="py-0 mt-1"
+            two-line>
+      <v-divider></v-divider>
       <template v-for="requisition in requisitions">
         <v-list-tile @click=""
                       ripple>
