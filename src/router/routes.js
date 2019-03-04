@@ -1,6 +1,7 @@
 const dashboard = () => import('../pages/Dashboard');
 const requisitions = () => import('../pages/Requisitions');
 const applicants = () => import('../pages/Applicants');
+const requisitionEdit = () => import('../pages/RequisitionEdit');
 
 export default {
   default: {
@@ -29,6 +30,18 @@ export default {
         text: 'Requisitions'
       }
     }
+  },
+  requisitionCreate: {
+    path: '/requisitions/create',
+    name: 'requisitionCreate',
+    component: requisitionEdit,
+    meta: {}
+  },
+  requisitionEdit: {
+    path: '/requisitions/:id/edit',
+    name: 'requisitionEdit',
+    component: requisitionEdit,
+    meta: {}
   },
   applicants: {
     path: '/applicants',
