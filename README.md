@@ -30,3 +30,6 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## Demo
+Visit this [link](https://firecruiter.firebaseapp.com).
