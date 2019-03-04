@@ -4,7 +4,7 @@
     
     <v-subheader px="0" mx="0">February</v-subheader>
     <v-divider></v-divider>
-    <v-list class="py-0 mt-1s">
+    <v-list class="py-0 mt-1">
       <template v-for="requisition in requisitions">
         <v-list-tile @click=""
                       ripple>
