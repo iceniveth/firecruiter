@@ -3,6 +3,11 @@ const requisitions = () => import('../pages/Requisitions');
 const applicants = () => import('../pages/Applicants');
 
 export default {
+  default: {
+    path: '/',
+    redirect: '/dashboard',
+    meta: {}
+  },
   dashboard: {
     path: '/dashboard',
     name: 'dashboard',
