@@ -33,12 +33,12 @@
     <v-tooltip left>
       <v-btn fab
              slot="activator"
-             color="black"
+             color="accent"
              bottom
              right
              fixed
              @click="gotoCreateRequisition">
-        <v-icon color="white">add</v-icon>
+        <v-icon color="accentText">add</v-icon>
       </v-btn>
       <span>Create Requisition</span>
     </v-tooltip>

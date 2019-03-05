@@ -24,11 +24,12 @@
     <v-tooltip left>
       <v-btn fab
              slot="activator"
-             color="black"
+             color="accent"
              bottom
              right
-             fixed>
-        <v-icon color="white">add</v-icon>
+             fixed
+             @click="gotoNewApplicant">
+        <v-icon color="accentText">add</v-icon>
       </v-btn>
       <span>Add Applicant</span>
     </v-tooltip>
