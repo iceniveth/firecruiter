@@ -28,7 +28,8 @@
                   clearable
                   placeholder="Search"
                   hide-details
-                  v-if="searchMode"></v-text-field>
+                  v-if="searchMode"
+                  autofocus></v-text-field>
     
     <v-spacer v-if="!searchMode"></v-spacer>
 
