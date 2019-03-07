@@ -7,8 +7,7 @@
             two-line>
       <v-divider></v-divider>
       <template v-for="requisition in requisitions">
-        <v-list-tile @click=""
-                      ripple>
+        <v-list-tile @click="">
           <v-list-tile-avatar>
             <v-avatar color="black"
                       size="36">
