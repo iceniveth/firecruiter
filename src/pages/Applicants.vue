@@ -5,9 +5,7 @@
     <v-list class="py-0 mt-1"
             two-line>
       <template v-for="applicant in applicants">
-        <v-list-tile @click=""
-                    ripple>
-          <v-list-tile-avatar color="black"
+        <v-list-tile @click="">
                               size="36">
             <span class="white--text headline">{{ applicant.name.charAt(0).toUpperCase() }}</span>
           </v-list-tile-avatar>
