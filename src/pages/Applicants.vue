@@ -6,8 +6,9 @@
             two-line>
       <template v-for="applicant in applicants">
         <v-list-tile @click="">
+          <v-list-tile-avatar color=""
                               size="36">
-            <span class="white--text headline">{{ applicant.name.charAt(0).toUpperCase() }}</span>
+            <span class="headline">{{ applicant.name.charAt(0).toUpperCase() }}</span>
           </v-list-tile-avatar>
 
           <v-list-tile-content>
@@ -35,6 +36,8 @@
 </template>
 
 <script>
+import routes from '../router/routes';
+
 export default {
   data() {
     return {
@@ -53,6 +56,13 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    gotoNewApplicant() {
+      this.$router.push({
+        name: routes.applicantCreate.name
+      });
+    }
   }
 }
 </script>

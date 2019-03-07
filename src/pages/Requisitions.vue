@@ -9,9 +9,9 @@
       <template v-for="requisition in requisitions">
         <v-list-tile @click="">
           <v-list-tile-avatar>
-            <v-avatar color="black"
+            <v-avatar color=""
                       size="36">
-              <span class="white--text headline">{{ requisition.position.charAt(0).toUpperCase() }}</span>
+              <span class="headline">{{ requisition.position.charAt(0).toUpperCase() }}</span>
             </v-avatar>
           </v-list-tile-avatar>
           
