@@ -1,8 +1,7 @@
 <template>
   <div>
     <app-navigation-bar title="Create Requisition"></app-navigation-bar>
-    <v-container fluid
-                 grid-list-md>
+    <v-container grid-list-md>
       <v-layout column>
         <v-flex>
           <v-text-field label="Requisition Number"></v-text-field>
