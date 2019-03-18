@@ -7,7 +7,7 @@
             two-line>
       <v-divider></v-divider>
       <template v-for="requisition in requisitions">
-        <v-list-tile @click="">
+        <v-list-tile @click="viewRequisition({ id: requisition.id })">
           <v-list-tile-avatar>
             <v-avatar color=""
                       size="36">
@@ -52,6 +52,7 @@ export default {
     return {
       requisitions: [
         {
+          id: 1,
           date: '2019-02-25',
           dateDue: '2019-03-30',
           number: 'LBF-HDM-2001',
@@ -60,6 +61,7 @@ export default {
           needed: 3
         },
         {
+          id: 2,
           date: '2019-02-25',
           dateDue: '2019-04-30',
           number: 'LBF-HDM-2002',
@@ -74,6 +76,14 @@ export default {
     gotoCreateRequisition() {
       this.$router.push({
         name: routes.requisitionCreate.name
+      });
+    },
+    viewRequisition({ id }) {
+      this.$router.push({
+        name: routes.requisitionView.name,
+        params: {
+          id
+        }
       });
     }
   }
