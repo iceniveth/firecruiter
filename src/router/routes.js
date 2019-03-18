@@ -2,6 +2,7 @@ const dashboard = () => import('../pages/Dashboard');
 const requisitions = () => import('../pages/Requisitions');
 const applicants = () => import('../pages/Applicants');
 const requisitionEdit = () => import('../pages/RequisitionEdit');
+const requisitionView = () => import('../pages/RequisitionView');
 
 export default {
   default: {
@@ -30,6 +31,12 @@ export default {
         text: 'Requisitions'
       }
     }
+  },
+  requisitionView: {
+    path: '/requisitions/:id',
+    name: 'requisitionView',
+    component: requisitionView,
+    meta: {}
   },
   requisitionCreate: {
     path: '/requisitions/create',
