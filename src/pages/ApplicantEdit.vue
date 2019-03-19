@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-navigation-bar title="Requisition"></app-navigation-bar>
+    <app-navigation-bar title="Applicant"></app-navigation-bar>
     <v-container>
       <v-layout>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
