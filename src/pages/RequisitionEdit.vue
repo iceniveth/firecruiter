@@ -13,11 +13,19 @@
                 </v-flex>
 
                 <v-flex>
-                  <v-text-field label="Requisition Number"></v-text-field>
+                  <v-layout :column="$vuetify.breakpoint.xs">
+                    <v-flex>
+                      <v-text-field label="Requisition Number"></v-text-field>
+                    </v-flex>
+
+                    <v-flex>
+                      <v-text-field label="Department"></v-text-field>
+                    </v-flex>
+                  </v-layout>
                 </v-flex>
 
                 <v-flex>
-                  <v-layout>
+                  <v-layout :column="$vuetify.breakpoint.xs">
                     <v-flex>
                       <v-text-field label="Date"></v-text-field>
                     </v-flex>
@@ -28,7 +36,7 @@
                 </v-flex>
                 
                 <v-flex>
-                  <v-layout>
+                  <v-layout :column="$vuetify.breakpoint.xs">
                     <v-flex>
                       <v-text-field label="Position"></v-text-field>
                     </v-flex>
