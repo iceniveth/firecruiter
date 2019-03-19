@@ -3,6 +3,7 @@ const requisitions = () => import('../pages/Requisitions');
 const applicants = () => import('../pages/Applicants');
 const requisitionEdit = () => import('../pages/RequisitionEdit');
 const requisitionView = () => import('../pages/RequisitionView');
+const applicantEdit = () => import('../pages/ApplicantEdit');
 
 export default {
   default: {
@@ -60,5 +61,17 @@ export default {
         text: 'Applicants'
       }
     }
+  },
+  applicantCreate: {
+    path: '/applicants/create',
+    name: 'applicantCreate',
+    component: applicantEdit,
+    meta: {}
+  },
+  applicantEdit: {
+    path: '/applicants/:id/edit',
+    component: 'applicantEdit',
+    component: applicantEdit,
+    meta: {}
   }
 };
