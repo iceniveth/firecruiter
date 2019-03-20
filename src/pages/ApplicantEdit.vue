@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-navigation-bar title="Applicant"></app-navigation-bar>
+    <app-navigation-bar :title="id == null ? 'Add Applicant' : 'Edit Applicant'"></app-navigation-bar>
     <v-container>
       <v-layout>
         <v-flex xs12 sm10 offset-sm1 md8 offset-md2>
@@ -194,6 +194,12 @@ export default {
   components: {
     ApplicantEducationEdit,
     ApplicantWorkExperienceEdit
+  },
+  props: {
+    id: {
+      type: String,
+      default: null
+    }
   },
   data() {
     return {
