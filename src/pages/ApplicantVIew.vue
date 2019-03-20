@@ -129,7 +129,16 @@
     </v-tooltip>
       </v-tab-item>
 
-      <v-tab-item value="Process">
+      <v-tab-item value="Applications" py-0>
+        <v-container py-0>
+          <v-layout column>
+            <v-flex>
+              <v-subheader>Applications</v-subheader>
+              <applicant-applications
+                :applications="applications"></applicant-applications>           
+            </v-flex>
+          </v-layout>
+        </v-container>
       </v-tab-item>
     </v-tabs-items>
   </div>
@@ -137,8 +146,12 @@
 
 <script>
 import routes from '../router/routes';
+import ApplicantApplications from '../components/ApplicantApplications';
 
 export default {
+  components: {
+    ApplicantApplications
+  },
   props: {
     id: {
       type: String
@@ -160,6 +173,30 @@ export default {
       workExperiences: [
         { from: '05-21-2005', to: '01-24-2010', company: 'Life Bank Foundation', position: 'Accountant' }
       ],
+      applications: [
+        {
+          requisitionId: '1',
+          number: '19-0001',
+          position: 'Accountant',
+          source: 'Walk-In',
+          sourceFrom: '',
+          processes: [
+            { id: '1', process: 'Screening', date: '01-03-2019', status: 'Recommended', remarks: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' },
+            { id: '2', process: 'Initial Interview', date: '01-05-2019', status: 'Not Recommended', remarks: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' }
+          ]
+        },
+        {
+          requisitionId: '2',
+          number: '19-0002',
+          position: 'Support',
+          source: 'Walk-In',
+          sourceFrom: '',
+          processes: [
+            { id: '1', process: 'Screening', date: '01-03-2019', status: 'Recommended', remarks: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' },
+            { id: '2', process: 'Initial Interview', date: '01-05-2019', status: 'Not Recommended', remarks: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' }
+          ]
+        }
+      ]
     }
   },
   methods: {
