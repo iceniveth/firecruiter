@@ -4,6 +4,7 @@ const applicants = () => import('../pages/Applicants');
 const requisitionEdit = () => import('../pages/RequisitionEdit');
 const requisitionView = () => import('../pages/RequisitionView');
 const applicantEdit = () => import('../pages/ApplicantEdit');
+const applicantView = () => import('../pages/ApplicantView');
 
 export default {
   default: {
@@ -61,6 +62,12 @@ export default {
         text: 'Applicants'
       }
     }
+  },
+  applicantView: {
+    path: '/applicants/:id',
+    name: 'applicantView',
+    component: applicantView,
+    meta: {}
   },
   applicantCreate: {
     path: '/applicants/create',

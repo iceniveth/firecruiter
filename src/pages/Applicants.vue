@@ -5,7 +5,7 @@
     <v-list class="py-0 mt-1"
             two-line>
       <template v-for="applicant in applicants">
-        <v-list-tile @click="">
+        <v-list-tile @click="viewApplicant({ id: applicant.id })">
           <v-list-tile-avatar color=""
                               size="36">
             <span class="headline">{{ applicant.name.charAt(0).toUpperCase() }}</span>
@@ -43,14 +43,17 @@ export default {
     return {
       applicants: [
         {
+          id: '1',
           name: 'Abbati, Angelica Willers',
           date: '2019-01-09'
         },
         {
+          id: '2',
           name: 'Doe, John Macarter',
           date: '2019-02-13'
         },
         {
+          id: '3',
           name: 'Lambal, Lorelei Appleyard',
           date: '2019-03-07'
         }
@@ -61,6 +64,14 @@ export default {
     gotoNewApplicant() {
       this.$router.push({
         name: routes.applicantCreate.name
+      });
+    },
+    viewApplicant(applicant) {
+      this.$router.push({
+        name: routes.applicantView.name,
+        params: {
+          id: applicant.id
+        }
       });
     }
   }
