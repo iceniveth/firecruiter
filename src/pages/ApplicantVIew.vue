@@ -16,45 +16,45 @@
               </v-list-tile>
 
               <v-list-tile>
-                <v-list-title-content>
+                <v-list-tile-content>
                   <v-list-tile-sub-title>Full Name</v-list-tile-sub-title>
                   <v-list-tile-title>{{ fullName }}</v-list-tile-title>
-                </v-list-title-content>
+                </v-list-tile-content>
               </v-list-tile>
 
               <v-list-tile>
-                <v-list-title-content>
+                <v-list-tile-content>
                   <v-list-tile-sub-title>Gender</v-list-tile-sub-title>
                   <v-list-tile-title>{{ gender }}</v-list-tile-title>
-                </v-list-title-content>
+                </v-list-tile-content>
               </v-list-tile>
 
               <v-list-tile>
-                <v-list-title-content>
+                <v-list-tile-content>
                   <v-list-tile-sub-title>Birth Date</v-list-tile-sub-title>
                   <v-list-tile-title>{{ birthDate }}</v-list-tile-title>
-                </v-list-title-content>
+                </v-list-tile-content>
               </v-list-tile>
 
               <v-list-tile>
-                <v-list-title-content>
+                <v-list-tile-content>
                   <v-list-tile-sub-title>Civil Status</v-list-tile-sub-title>
                   <v-list-tile-title>{{ civilStatus }}</v-list-tile-title>
-                </v-list-title-content>
+                </v-list-tile-content>
               </v-list-tile>
 
               <v-list-tile>
-                <v-list-title-content>
+                <v-list-tile-content>
                   <v-list-tile-sub-title>City Address</v-list-tile-sub-title>
                   <v-list-tile-title>{{ cityAddress }}</v-list-tile-title>
-                </v-list-title-content>
+                </v-list-tile-content>
               </v-list-tile>
 
               <v-list-tile>
-                <v-list-title-content>
+                <v-list-tile-content>
                   <v-list-tile-sub-title>Provincial Address</v-list-tile-sub-title>
                   <v-list-tile-title>{{ provincialAddress }}</v-list-tile-title>
-                </v-list-title-content>
+                </v-list-tile-content>
               </v-list-tile>
             </v-list>
           </v-card>
