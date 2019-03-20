@@ -6,8 +6,12 @@
       v-model="tab"
       centered
       color="grey lighten-5">
-      <v-tab href="#Detail" key="Detail">Detail</v-tab>
-      <v-tab href="#Process" key="Process">Process</v-tab>
+      <v-tab
+        href="#Detail"
+        active-class="accent--text">Detail</v-tab>
+      <v-tab
+        href="#Applications"
+        active-class="accent--text">Applications</v-tab>
     </v-tabs>
 
     <v-tabs-items v-model="tab">
