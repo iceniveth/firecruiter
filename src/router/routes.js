@@ -70,8 +70,9 @@ export default {
   },
   applicantEdit: {
     path: '/applicants/:id/edit',
-    component: 'applicantEdit',
+    name: 'applicantEdit',
     component: applicantEdit,
+    props: true,
     meta: {}
   }
 };
