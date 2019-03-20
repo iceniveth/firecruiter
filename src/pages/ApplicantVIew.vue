@@ -1,101 +1,123 @@
 <template>
   <div>
     <app-navigation-bar title="Applicant"></app-navigation-bar>
-    <v-container>
-      <v-layout column>
-        <v-flex>
-          <v-subheader>Personal Information</v-subheader>
+    
+    <v-tabs
+      v-model="tab"
+      centered
+      color="grey lighten-5">
+      <v-tab href="#Detail" key="Detail">Detail</v-tab>
+      <v-tab href="#Process" key="Process">Process</v-tab>
+    </v-tabs>
 
-          <v-card>
-            <v-list>
-              <v-list-tile>
-                <v-list-tile-content>
-                  <v-list-tile-sub-title>Applicant Number</v-list-tile-sub-title>
-                  <v-list-tile-title>{{ applicantNumber }}</v-list-tile-title>
-                </v-list-tile-content>
-              </v-list-tile>
+    <v-tabs-items v-model="tab">
+      <v-tab-item
+        value="Detail"
+        py-0>
+        <v-container
+          py-0>
+          <v-layout column>
+            <v-flex>
+              <v-subheader>Personal Information</v-subheader>
 
-              <v-list-tile>
-                <v-list-tile-content>
-                  <v-list-tile-sub-title>Full Name</v-list-tile-sub-title>
-                  <v-list-tile-title>{{ fullName }}</v-list-tile-title>
-                </v-list-tile-content>
-              </v-list-tile>
+              <v-card>
+                <v-list>
+                  <v-list-tile>
+                    <v-list-tile-content>
+                      <v-list-tile-sub-title>Applicant Number</v-list-tile-sub-title>
+                      <v-list-tile-title>{{ applicantNumber }}</v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
 
-              <v-list-tile>
-                <v-list-tile-content>
-                  <v-list-tile-sub-title>Gender</v-list-tile-sub-title>
-                  <v-list-tile-title>{{ gender }}</v-list-tile-title>
-                </v-list-tile-content>
-              </v-list-tile>
+                  <v-list-tile>
+                    <v-list-tile-content>
+                      <v-list-tile-sub-title>Full Name</v-list-tile-sub-title>
+                      <v-list-tile-title>{{ fullName }}</v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
 
-              <v-list-tile>
-                <v-list-tile-content>
-                  <v-list-tile-sub-title>Birth Date</v-list-tile-sub-title>
-                  <v-list-tile-title>{{ birthDate }}</v-list-tile-title>
-                </v-list-tile-content>
-              </v-list-tile>
+                  <v-list-tile>
+                    <v-list-tile-content>
+                      <v-list-tile-sub-title>Gender</v-list-tile-sub-title>
+                      <v-list-tile-title>{{ gender }}</v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
 
-              <v-list-tile>
-                <v-list-tile-content>
-                  <v-list-tile-sub-title>Civil Status</v-list-tile-sub-title>
-                  <v-list-tile-title>{{ civilStatus }}</v-list-tile-title>
-                </v-list-tile-content>
-              </v-list-tile>
+                  <v-list-tile>
+                    <v-list-tile-content>
+                      <v-list-tile-sub-title>Birth Date</v-list-tile-sub-title>
+                      <v-list-tile-title>{{ birthDate }}</v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
 
-              <v-list-tile>
-                <v-list-tile-content>
-                  <v-list-tile-sub-title>City Address</v-list-tile-sub-title>
-                  <v-list-tile-title>{{ cityAddress }}</v-list-tile-title>
-                </v-list-tile-content>
-              </v-list-tile>
+                  <v-list-tile>
+                    <v-list-tile-content>
+                      <v-list-tile-sub-title>Civil Status</v-list-tile-sub-title>
+                      <v-list-tile-title>{{ civilStatus }}</v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
 
-              <v-list-tile>
-                <v-list-tile-content>
-                  <v-list-tile-sub-title>Provincial Address</v-list-tile-sub-title>
-                  <v-list-tile-title>{{ provincialAddress }}</v-list-tile-title>
-                </v-list-tile-content>
-              </v-list-tile>
-            </v-list>
-          </v-card>
-        </v-flex>
+                  <v-list-tile>
+                    <v-list-tile-content>
+                      <v-list-tile-sub-title>City Address</v-list-tile-sub-title>
+                      <v-list-tile-title>{{ cityAddress }}</v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
 
-        <v-flex v-if="educations.some(e => e)">
-          <v-subheader>Education</v-subheader>
+                  <v-list-tile>
+                    <v-list-tile-content>
+                      <v-list-tile-sub-title>Provincial Address</v-list-tile-sub-title>
+                      <v-list-tile-title>{{ provincialAddress }}</v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                </v-list>
+              </v-card>
+            </v-flex>
 
-          <v-card>
-            <v-list>
-              <v-list-tile
-                v-for="(education, index) in educations"
-                :key="index">
-                <v-list-tile-content>
-                  <v-list-tile-title>{{ education.from }} - {{ education.to }} <span class="grey--text"> | </span> {{ education.school }}</v-list-tile-title>
-                  <v-list-tile-sub-title>{{ education.attainment }}</v-list-tile-sub-title>
-                </v-list-tile-content>
-              </v-list-tile>
-            </v-list>
-          </v-card>
-        </v-flex>
+            <v-flex v-if="educations.some(e => e)">
+              <v-subheader>Education</v-subheader>
 
-        <v-flex v-if="workExperiences.some(e => e)">
-          <v-subheader>Work Experience</v-subheader>
-          
-          <v-card>
-            <v-list>
-              <v-list-tile
-                v-for="(workExperience, index) in workExperiences"
-                :key="index">
-                <v-list-tile-content>
-                  <v-list-tile-title>{{ workExperience.from }} - {{ workExperience.to }} <span class="grey--text"> | </span> {{ workExperience.company }}</v-list-tile-title>
-                  <v-list-tile-sub-title>{{ workExperience.position }}</v-list-tile-sub-title>
-                </v-list-tile-content>
-              </v-list-tile>
-            </v-list>
-          </v-card>
-        </v-flex>
+              <v-card>
+                <v-list>
+                  <v-list-tile
+                    v-for="(education, index) in educations"
+                    :key="index">
+                    <v-list-tile-content>
+                      <v-list-tile-title>{{ education.from }} - {{ education.to }} <span class="grey--text"> | </span> {{ education.school }}</v-list-tile-title>
+                      <v-list-tile-sub-title>{{ education.attainment }}</v-list-tile-sub-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                </v-list>
+              </v-card>
+            </v-flex>
 
-      </v-layout>
-    </v-container>
+            <v-flex v-if="workExperiences.some(e => e)">
+              <v-subheader>Work Experience</v-subheader>
+              
+              <v-card>
+                <v-list>
+                  <v-list-tile
+                    v-for="(workExperience, index) in workExperiences"
+                    :key="index">
+                    <v-list-tile-content>
+                      <v-list-tile-title>{{ workExperience.from }} - {{ workExperience.to }} <span class="grey--text"> | </span> {{ workExperience.company }}</v-list-tile-title>
+                      <v-list-tile-sub-title>{{ workExperience.position }}</v-list-tile-sub-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                </v-list>
+              </v-card>
+            </v-flex>
+
+          </v-layout>
+        </v-container>
+      </v-tab-item>
+
+      <v-tab-item value="Process">
+        
+      </v-tab-item>
+    </v-tabs-items>
+    
+    
 
     <v-tooltip left>
       <v-btn fab
@@ -123,6 +145,7 @@ export default {
   },
   data() {
     return {
+      tab: 'Detail',
       applicantNumber: '123',
       fullName: 'Tan, Kenneth Ken L.',
       gender: 'Male',
