@@ -110,14 +110,6 @@
 
           </v-layout>
         </v-container>
-      </v-tab-item>
-
-      <v-tab-item value="Process">
-        
-      </v-tab-item>
-    </v-tabs-items>
-    
-    
 
     <v-tooltip left>
       <v-btn fab
@@ -131,6 +123,11 @@
       </v-btn>
       <span>Edit Applicant</span>
     </v-tooltip>
+      </v-tab-item>
+
+      <v-tab-item value="Process">
+      </v-tab-item>
+    </v-tabs-items>
   </div>
 </template>
 
